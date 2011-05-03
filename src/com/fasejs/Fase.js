@@ -20,6 +20,9 @@
 	// fase, phase, face, $ ...
 	var Fase = function(){};
 	
+	// default framerate
+	Fase.frameRate = 72;
+	
 	// map over fase in case of overwrite
 	_Fase = window.Fase;
 	
@@ -39,11 +42,10 @@
 	Fase.namespace = function(ns_string) {
 		var parts = ns_string.split('.');
 		var parent = Fase;
-		var q;
 		if (parts[0] === 'Fase') {
 			parts = parts.slice(1);
 		}
-		for (q = 0; q < parts.length; q += 1) {
+		for (var q = 0; q < parts.length; q += 1) {
 			if (typeof parent[parts[q]] === 'undefined') {
 				parent[parts[q]] = {};
 			}	
@@ -52,7 +54,13 @@
 		return parent;
 	};
 	
-	Fase.namespace('Fase.log');
+	// namespacing 
+	Fase.namespace('Fase.TextField');
+	Fase.namespace('Flash.display');
+	Fase.namespace('Flash.events');
+	Fase.namespace('Flash.text');
+	Fase.namespace('Flash.geom');
+	Fase.namespace('Flash.utils');
 	
 	Fase.log = function(log_string) {
 		if (typeof(console === Object)) {
@@ -62,11 +70,36 @@
 		};
 	};
 	
+	Fase.import = function(package) {
+	};
+		
+	Fase.SWF = function(width, height, frameRate, backgroundColor) {
+		document.bgColor = backgroundColor;
+		var container = document.createElement('div');
+		container.id = 'container';
+		container.style.position = 'relative';
+		container.style.margin = "0px auto";
+		container.style.width = width + 'px';
+		container.style.height = height + 'px';
+		document.body.appendChild(container);
+	};
+		
+	Fase.TextField = {
+		__construct : function() {
+			var p = document.createElement('p');
+			p.id = 'tmp';
+			document.body.appendChild(p);
+		}(Fase.TextField.__construct),
+		text : function() {
+		},
+		setTextFormat : function() {
+		}
+	};
+	
+	Fase.TextFormat = {
+	};
+	
 	// global
 	window.Fase = window.$ = Face = Phase = Fase;
 	
 })(window);
-
-
-
-/* EOF */
