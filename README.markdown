@@ -1,13 +1,12 @@
-
 # FaseJS
 
 ## This is really cool
  
  **Fast ActionScript Emulation for JavaScript**
  
-  * Adheres to most of ActionScript 3.0 code format
-  * Cross-Browser *xWhatever*
-  * Small Footprint
+  * FaseJS seeks to create a dialect of javascript that will make it natural for AS3 programmers to transition into Web standards.
+  * The project aims to be truly cross-browser under the hood, so users will only need to think about their creative goals.
+  * The end product will be a compact js library that contains the FaseJS core and a collection of classes familiar to Flash developers for creating and manuipulating a DisplayList within the DOM.
   
 ## Want to Contribute?
 
