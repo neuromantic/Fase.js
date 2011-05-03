@@ -23,12 +23,6 @@
 	// default framerate
 	Fase.frameRate = 72;
 	
-	// map over fase in case of overwrite
-	_Fase = window.Fase;
-	
-	// map over the $ in case of overwrite
-	_$ = window.$;
-	
 	// useragent regexp
 	rwebkit = /(webkit)[ \/]([\w.]+)/;
 	ropera = /(opera)(?:.*version)?[ \/]([\w.]+)/;
@@ -70,10 +64,10 @@
 		};
 	};
 	
-	Fase.import = function(package) {
+	import = function(package) {
 	};
 		
-	Fase.SWF = function(width, height, frameRate, backgroundColor) {
+	SWF = function(width, height, frameRate, backgroundColor) {
 		document.bgColor = backgroundColor;
 		var container = document.createElement('div');
 		container.id = 'container';
@@ -84,10 +78,12 @@
 		document.body.appendChild(container);
 	};
 		
-	Fase.TextField = {
+	TextField = {
 		__construct : function() {
 			var p = document.createElement('p');
 			p.id = 'tmp';
+			p.style.color = '#fff';
+			p.innerHTML = 'Test';
 			document.body.appendChild(p);
 		}(Fase.TextField.__construct),
 		text : function() {
@@ -96,10 +92,11 @@
 		}
 	};
 	
-	Fase.TextFormat = {
+	TextFormat = {
 	};
+
 	
 	// global
-	window.Fase = window.$ = Face = Phase = Fase;
+	window.Fase = Face = Phase = Fase;
 	
 })(window);
