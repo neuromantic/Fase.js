@@ -9,5 +9,8 @@
  */
 
 var Fase = Fase || {};
+window.Fase = Fase;
+
+
 
 /* EOF */
