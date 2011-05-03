@@ -2,7 +2,7 @@
  * Fase.js v0.0.1
  * http://fasejs.com/
  *
- * Copyright 2011, Ross Sclafani & Edward Hotchkiss
+ * Copyright 2011, Ross Sclafani & For Sure, Rad!
  * Licensed under the MIT license.
  * http://fasejs.com/LICENSE
  *
